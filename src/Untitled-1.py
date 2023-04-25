@@ -25,11 +25,20 @@ def appendLiveFeed(str):
 data = []
 exp = "MQ4-1 =.*;MQ4-2 =.*;MQ4-3 =.*;MQ7-1 =.*;MQ7-2 =.*;MQ7-3 =.*;$"
 
+fig = plt.figure()
+
 def plotData():
     plt.title('Real-time data plot')
     plt.grid(True)
     plt.ylabel('Analog values')
+    # plt.plot(data, '-ro')
+    
+
+    plt.subplot(2, 2, 1)
     plt.plot(data, '-ro')
+
+    # plt.subplot(2, 2, 2)
+    # plt.plot(x, y)
 
 # %%
 arduinoData = serial.Serial('/dev/ttyACM0', 9600)
@@ -55,20 +64,3 @@ while True:
         print("error")
         continue
     
-
-# %% [markdown]
-# ### MQ 4|
-
-# %% [markdown]
-# Load resistance = 20kOmh
-
-# %%
-
-
-# %% [markdown]
-# ### MQ 7
-
-# %%
-
-
-

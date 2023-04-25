@@ -47,6 +47,6 @@ void loop() {
   // Serial.println(buffer);
 
   // wait 2 milliseconds before the next loop for the analog-to-digital
-  delay(2);
+  delay(500);
 
 }
